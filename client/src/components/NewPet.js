@@ -6,6 +6,8 @@ const options = [
   { value: 'DOG', label: 'Dog' }
 ]
 
+// Make sure you return same fields on mutations that you do as queries - this will return enough data, to keep in store - that means you don't need to do another round trip
+
 export default function NewPet({onSubmit, onCancel}) {
   const [type, setType] = useState('DOG')
   const [name, setName] = useState('')
